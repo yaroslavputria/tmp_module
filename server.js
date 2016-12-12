@@ -29,4 +29,4 @@ http.createServer(function(req, res) {
   });
 }).listen(3001);
 //console.log('server is running');
-console.log(new userModule.User('Брут'));
+console.log(new userModule.User('Brut'));
