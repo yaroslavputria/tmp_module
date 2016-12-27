@@ -30,3 +30,13 @@ http.createServer(function(req, res) {
 }).listen(3001);
 //console.log('server is running');
 console.log(new userModule.User('Brut'));
+
+
+const util = require('util');
+
+eventEmitter.on('test', o => {
+	o.approved = true;
+	console.log(o);
+});
+
+eventEmitter.emit('test', {text: 'test'});
