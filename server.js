@@ -1,20 +1,20 @@
-let http = require('http');
-let express = require('express');
-let fs = require('fs');
-let events = require('events');
+var http = require('http');
+var express = require('express');
+var fs = require('fs');
+var events = require('events');
 
-let userModule = require('./user');
+var userModule = require('./user');
 
 //var data = fs.readFileSync('input.txt');
 
-let eventEmitter = new events.EventEmitter();
+var eventEmitter = new events.EventEmitter();
 
-const buf1 = Buffer.alloc(10);// for 10 octets
-const buf2 = Buffer.alloc(10, 1);
-const buf3 = Buffer.from([10, 20, 30, 40, 50]);
-const buf4 = Buffer.from('just some text', 'ucs2');// other encodings "ascii", "utf8", "utf16le", "ucs2", "base64" or "hex"
+var buf1 = Buffer.alloc(10);// for 10 octets
+var buf2 = Buffer.alloc(10, 1);
+var buf3 = Buffer.from([10, 20, 30, 40, 50]);
+var buf4 = Buffer.from('just some text', 'ucs2');// other encodings "ascii", "utf8", "utf16le", "ucs2", "base64" or "hex"
 
-let reqHandler = (e) => {
+var reqHandler = (e) => {
   console.log('request was got');
 };
 
@@ -32,7 +32,7 @@ http.createServer(function(req, res) {
 console.log(new userModule.User('Brut'));
 
 
-const util = require('util');
+var util = require('util');
 
 eventEmitter.on('test', o => {
 	o.approved = true;
